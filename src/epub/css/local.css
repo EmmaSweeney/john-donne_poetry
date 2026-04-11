@@ -1,2 +1,217 @@
 @charset "utf-8";
 @namespace epub "http://www.idpf.org/2007/ops";
+
+section[epub|type~="z3998:poem"],
+[epub|type~="prologue"],
+[epub|type~="chapter"]{
+	break-before: page;
+}
+
+/* Dedication */
+[epub|type~="dedication"] header p{
+	font-variant: small-caps;
+	line-height: 2;
+}
+
+[epub|type~="dedication"] header b{
+	font-size: larger;
+	text-transform: uppercase;
+}
+
+[epub|type~="dedication"] footer{
+	margin-top: 1em;
+	text-align: right;
+}
+/* End dedication */
+
+/* Poem headers, footers */
+[epub|type~="z3998:poem"] header,
+[epub|type~="z3998:song"] header{
+	margin: 2em 1em 1em;
+}
+
+[epub|type~="z3998:song"] > header{
+	font-variant: small-caps;
+}
+
+[epub|type~="z3998:poem"] hgroup p,
+[epub|type~="z3998:poem"] header p,
+[epub|type~="z3998:song"] header p,
+[epub|type~="z3998:poem"] footer p{
+	text-align: center;
+}
+
+[epub|type~="z3998:poem"] header p + p,
+[epub|type~="z3998:song"] header p + p{
+	font-variant: small-caps;
+	margin: 0;
+}
+
+[epub|type~="z3998:poem"] header + p{
+	margin: 0;
+}
+
+[epub|type~="z3998:poem"] footer{
+	margin-top: 1em;
+	text-align: center;
+}
+
+[epub|type~="z3998:poem"] footer p[epub|type~="z3998:signature"]{
+	font-variant: small-caps;
+	text-align: right;
+}
+/* End poem headers, footers */
+
+/* Bridgeheads */
+[epub|type~="bridgehead"]{
+	display: inline-block;
+	font-style: italic;
+	font-variant: normal;
+	max-width: 60%;
+	text-align: justify;
+	text-indent: 0;
+}
+
+[epub|type~="z3998:poem"] [epub|type~="bridgehead"]{
+	text-align: justify;
+}
+
+[epub|type~="bridgehead"] p + p{
+	text-indent: 0;
+}
+/* End bridgeheads */
+
+/* Poem, song, verse */
+[epub|type~="z3998:poem"] p,
+[epub|type~="z3998:song"] p,
+[epub|type~="z3998:verse"] p{
+	text-align: initial;
+	text-indent: 0;
+}
+
+[epub|type~="z3998:poem"] p > span,
+[epub|type~="z3998:song"] p > span,
+[epub|type~="z3998:verse"] p > span{
+	display: block;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+[epub|type~="z3998:poem"] p > span + br,
+[epub|type~="z3998:song"] p > span + br,
+[epub|type~="z3998:verse"] p > span + br{
+	display: none;
+}
+
+[epub|type~="z3998:poem"] p + p,
+[epub|type~="z3998:song"] p + p{
+	margin-top: 1em;
+}
+
+#elegies [epub|type~="z3998:poem"] p + p > span:first-child,
+[epub|type~="z3998:poem"]#to-sir-henry-wotton-1 p + p > span:first-child{
+	padding-left: 2em;
+	text-indent: -1em;
+}
+
+[epub|type~="z3998:poem"]#elegy-11 p + p,
+[epub|type~="z3998:poem"]#to-sir-henry-wotton-1 p + p{
+	margin-top: 0;
+}
+
+p span.i1{
+	padding-left: 2em;
+	text-indent: -1em;
+}
+
+p span.i2{
+	padding-left: 3em;
+	text-indent: -1em;
+}
+
+p span.i3{
+	padding-left: 4em;
+	text-indent: -1em;
+}
+
+p span.i4{
+	padding-left: 5em;
+	text-indent: -1em;
+}
+
+p span.i5{
+	padding-left: 6em;
+	text-indent: -1em;
+}
+
+p span.i6{
+	padding-left: 7em;
+	text-indent: -1em;
+}
+/* End poem, song, verse */
+
+/* Drama */
+[epub|type~="z3998:drama"] table{
+	border-collapse: collapse;
+	margin: 1em auto;
+	width: 100%;
+}
+
+[epub|type~="z3998:drama"] tr:first-child td{
+	padding-top: 0;
+}
+
+[epub|type~="z3998:drama"] tr:last-child td{
+	padding-bottom: 0;
+}
+
+[epub|type~="z3998:drama"] td{
+	padding: .5em;
+	vertical-align: top;
+}
+
+[epub|type~="z3998:drama"] td:last-child{
+	padding-right: 0;
+}
+
+[epub|type~="z3998:drama"] td:first-child{
+	padding-left: 0;
+}
+
+[epub|type~="z3998:drama"] td[epub|type~="z3998:persona"]{
+	hyphens: none;
+	-epub-hyphens: none;
+	text-align: right;
+	width: 20%;
+}
+
+[epub|type~="z3998:persona"]{
+	font-variant: all-small-caps;
+}
+
+article[epub|type~="z3998:scene"] > p{
+	margin: 1em auto;
+	width: 75%;
+}
+
+@media(max-width: 400px){
+	[epub|type~="z3998:drama"] td,
+	[epub|type~="z3998:drama"] td[epub|type~="z3998:persona"],
+	[epub|type~="z3998:drama"] td:last-child{
+		display: block;
+		padding: 0;
+		text-align: initial;
+		width: 100%;
+	}
+
+	[epub|type~="z3998:drama"] td[epub|type~="z3998:persona"]{
+		break-after: avoid;
+		margin-top: 1.5em;
+	}
+
+	/* Rows that are only stage direction get a top margin. */
+	[epub|type~="z3998:drama"] td:first-child:not([epub|type]) + td{
+		margin-top: 1.5em;
+	}
+}
+/* End drama */
