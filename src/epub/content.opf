@@ -34,9 +34,9 @@
 		<meta property="term" refines="#subject-1">sh85043935</meta>
 		<meta property="se:subject">Poetry</meta>
 		<meta property="se:is-a-collection">true</meta>
-		<dc:description id="description">DESCRIPTION</dc:description>
+		<dc:description id="description">A collection of John Donne’s poetry.</dc:description>
 		<meta id="long-description" property="se:long-description" refines="#description">
-			LONG_DESCRIPTION
+			&lt;p&gt;Writing in the late 16th and early 17th centuries, &lt;a href="https://standardebooks.org/ebooks/john-donne"&gt;John Donne’s&lt;/a&gt; poetry explored themes like love, religion, mortality, and the relationship between body and soul. His love poems blend passion with wit and surprising comparisons, while his religious works reflect deep spiritual struggle and devotion. Overall, Donne’s poetry stands out for its complexity and ability to connect abstract ideas with everyday experience. John Donne’s most popular poems include “The Flea,” “A Valediction Forbidding Mourning,” “The Sun Rising,” “The Canonization,” and “Holy Sonnet XIV.”&lt;/p&gt;
 		</meta>
 		<dc:language>en-GB</dc:language>
 		<!-- order of poems -->
