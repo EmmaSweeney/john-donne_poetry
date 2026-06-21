@@ -63,20 +63,19 @@ section[epub|type~="z3998:poem"],
 /* End poem headers, footers */
 
 /* Bridgeheads */
-[epub|type~="bridgehead"]{
+[epub|type~="se:bridgehead"]{
 	display: inline-block;
 	font-style: italic;
-	font-variant: normal;
 	max-width: 60%;
 	text-align: justify;
 	text-indent: 0;
 }
 
-[epub|type~="z3998:poem"] [epub|type~="bridgehead"]{
+[epub|type~="z3998:poem"] [epub|type~="se:bridgehead"]{
 	text-align: justify;
 }
 
-[epub|type~="bridgehead"] p + p{
+[epub|type~="se:bridgehead"] p + p{
 	text-indent: 0;
 }
 /* End bridgeheads */
