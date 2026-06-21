@@ -115,6 +115,8 @@ section[epub|type~="z3998:poem"],
 }
 
 [epub|type~="z3998:poem"]#elegy-11 p + p,
+[epub|type~="z3998:poem"]#elegy-18 p + p,
+[epub|type~="z3998:poem"]#elegy-19 p + p,
 [epub|type~="z3998:poem"]#to-sir-henry-wotton-1 p + p{
 	margin-top: 0;
 }
