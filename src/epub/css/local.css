@@ -1,10 +1,13 @@
 @charset "utf-8";
 @namespace epub "http://www.idpf.org/2007/ops";
 
-section[epub|type~="z3998:poem"],
+[epub|type~="part"] > h2,
+[epub|type~="part"] > header,
+[epub|type~="division"] > h3,
+[epub|type~="z3998:poem"],
 [epub|type~="prologue"],
 [epub|type~="chapter"]{
-	break-before: page;
+	break-after: page;
 }
 
 /* Dedication */
