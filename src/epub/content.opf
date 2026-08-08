@@ -41,7 +41,7 @@
 			&lt;p&gt;John Donne’s most popular poems include “The Flea,” “A Valediction Forbidding Mourning,” “The Sun Rising,” “The Canonization,” and “Holy Sonnet XIV.”&lt;/p&gt;
 		</dc:description>
 		<dc:language>en-GB</dc:language>
-		<!-- order of poems -->
+		<!-- order of poems and source of missing poems -->
 		<dc:source>https://archive.org/details/poemsofjohndonne01donn_1</dc:source>
 		<!-- Modern English versions of poems, Volume 1 -->
 		<dc:source>https://archive.org/details/poemswithelegie00chamgoog</dc:source>
